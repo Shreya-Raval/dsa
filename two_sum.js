@@ -15,6 +15,20 @@ var twoSum = function(nums, target) {
 function sortedTwoSum(arr,target){
     let left = 0;
     let right = arr.length - 1;
+    /* Chatgpt modified code version
+     while (left < right) {
+        const sum = arr[left] + arr[right];
+
+        if (sum === target) {
+            return [left, right];
+        } else if (sum > target) {
+            right--;
+        } else {
+            left++;
+        }
+    }
+
+    */
     while(left < right){
         let sum = arr[left] + arr[right];
         if(sum === target){
